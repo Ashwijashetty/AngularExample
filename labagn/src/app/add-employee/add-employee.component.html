@@ -1,0 +1,23 @@
+<form [formGroup]="userForm" (ngSubmit)="saveData()">
+<div>
+<table>
+<tr><td><label>ID</label></td>
+<td><input type="text" formControlName="empId"/></td></tr>
+<span *ngIf="userForm.get('empId').invalid && userForm.get('empId').touched">Id is required</span>
+
+<tr><td><label>Name</label></td>
+<td><input type="text"formControlName="empName"/></td></tr>
+<span *ngIf="userForm.get('empName').invalid && userForm.get('empName').touched">Name is required</span>
+
+<tr><td><label>Salary</label></td>
+<td><input type="text"formControlName="empSal"/></td></tr>
+<span *ngIf="userForm.get('empSal').invalid && userForm.get('empSal').touched">Salary is required</span>
+<tr><td><label>Department</label></td>
+<td><input type="text"formControlName="empDep"/></td></tr>
+<span *ngIf="userForm.get('empDep').invalid && userForm.get('empDep').touched">Department is required</span>
+
+<button type="submit">Add Employee</button>
+</table>
+</div>
+
+</form>

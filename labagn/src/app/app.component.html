@@ -1,0 +1,6 @@
+<!--<app-sorted-employees></app-sorted-employees>
+<app-book-list></app-book-list>-->
+<p>{{message}}</p>
+<app-add-employee (empSubmit)="addEmployee($event.data)"></app-add-employee>
+<app-list-employees [empList]="empData" (delEmployee)="deleteEmployee($event.data)" (modifyEmployee)="findEmployee($event.data)"></app-list-employees>
+<app-update-employee (empSubmit)="editEmployee($event.data)" [edit]="currentEmployee"></app-update-employee>
